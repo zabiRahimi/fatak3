@@ -1,0 +1,26 @@
+/* 1200 , 992 , 768 , 576 , 454 , 332 */
+*{
+    @font-face {
+   font-family: 'b koodak';
+   src: url('../public/fonts/BKoodakBold.eot');
+   src: url('../public/fonts/BKoodakBold.eot?#') format('eot'),  /* IE6–8 */
+        url('../public/fonts/BKoodakBold.woff') format('woff'),
+        url('../public/fonts/BKoodakBold.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+ font-family: 'b yekan';
+   src: url('../public/fonts/BYekan.eot?#') format('eot'),  /* IE6–8 */
+       url('../public/fonts/BYekan.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url('../public/fonts/BYekan.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+ }
+ }
+ h1,h2,h3,h4,h5,h6{margin: 0;}
+ .number{font-family:'b yekan',"b koodak"; }
+ .tahoma{font-family: Tahoma;}
+ a{cursor: pointer;}
+ .a{text-decoration: none; color: inherit;}
+ .kama{ font-family:Tahoma, Geneva, sans-serif ; color:#000}
+ .br{margin-bottom: 15px;}
+ html , body{width: 100%; padding: 0 1px; font-family:"b koodak", Arial, Helvetica, sans-serif;direction:rtl;text-align: right;background-color: #f3f3f3;}
+
+
+
+

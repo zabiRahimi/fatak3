@@ -1,0 +1,9 @@
+.addOrderAndFollowUpContiner{
+    width: calc(50% - 30px);
+    margin: 0 15px;
+    padding: 5px;
+    display: flex;
+    background-color: #edeff1;
+    border-radius: 3px;
+}
+

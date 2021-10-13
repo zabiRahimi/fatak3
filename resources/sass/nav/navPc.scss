@@ -1,0 +1,14 @@
+.navPcContainer{width: 100%;height: inherit; display: flex;align-items: center;}
+.navPcContainer ul{width: 100%;height: inherit; padding: 0;margin: 0; display: flex;align-items: center;}
+.navPcContainer li{height: 20px; list-style: none;display: flex;flex-flow: column;position: relative;padding:0 8px;margin-left: 2px;border-radius: 2px; background-color:$btnLi ;color:#5f6f81;}
+.navPcContainer li a{color:#5f6f81;}
+.navPcContainer li .divLi{display: flex;flex-flow: row;justify-content: space-between;}
+.divLiIcon i{padding-right: 12px;position: relative;}
+/* .divLiIcon .sortDownPc{} */
+.divLiIcon .sortUpPc{top: 3px;display: none;}
+.navPcContainer li ul.menuPcUlSub{width: 155px; height: initial; margin: 0;padding: 2px 4px 2px 2px;top: 22px;right: 0; display: none;flex-flow: column;position: absolute;background-color:#e1dfdf;}
+.navPcContainer li ul li{width: 100%; margin: 1px 0 0;}
+.navPcContainer li:hover .menuPcUlSub{display: flex;}
+.navPcContainer li:hover .menuPcUlSub li:hover{background-color: #fff;}
+.navPcContainer li:hover{display: flex;background-color:#e1dfdf;}
+.navPcContainer li:hover .sortDownPc{color:#e1dfdf ; }

@@ -1,0 +1,188 @@
+
+.formContainer{
+    width: 100%;
+    padding: 15px;
+    margin: 6px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border: 2px solid #0b4b3d;
+    border-radius: 3px;
+}
+
+.formRight{
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titleForm{
+    width: 320px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4545e6;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px 8px 0 0;
+}
+.form{
+    width: 320px;
+    padding:6px 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f8fa;
+    border: 1px solid #eaecef;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+.groupInput{
+    width: 100%;
+    margin:15px 0 5px; 
+}
+.inputForm{
+    width: 100%;
+    height: 40px;
+    // margin:0 0 7px;
+    display: flex;
+    justify-items: center;
+    flex-flow: column;
+    background-color: white;
+    border: 1px solid #eaecef;
+    border-radius: 12px;
+}
+.inputForm:focus-within{
+border-color: #30badd;
+}
+
+.inputForm input:focus{
+    // height: 38px;
+    border: none;
+}
+.inputForm label{
+    width: 100%;
+    height: inherit;
+    padding: 0 12px;
+    display: none;
+    align-items: center;
+    justify-content:start;
+    
+    // border-radius: 0 12px 12px 0;
+}
+.divLabel{
+    width: 100%;
+    height:fit-content;
+    max-height: 14px;
+    font-size: 8px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border-radius: 12px 12px 0 0;
+}
+.inputForm i{
+    width: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+justify-self: left;
+// justify-self: start;
+background-color: white;
+position: relative;
+top: -8px;
+left: 13px;
+
+font-size: 14px;
+display: none;
+}
+.inputForm i.true{
+    color: green;
+    
+    
+}
+.inputForm i.false{
+    color: red;
+    
+    
+}
+.inputForm input{
+    width: 100%;
+    height: 38px;
+    padding: 0 12px;
+    border: none;
+    border-radius: 12px;
+    
+}
+.inputForm input:focus{
+    outline: none;
+    
+}
+
+// کلاس برای هنگامی که کاربر تکس باکس را انتخاب می کند
+.inputFromSelect{
+    flex-flow: column;    
+}
+.inputFromSelect label{
+    height: 14px;
+    margin: 0;
+    border-radius: 12px 12px 0 0;
+    color: #686868;
+    font-size: 8px;
+    
+}
+.inputFromSelect input{
+    height: 24px;
+    margin: 0;
+    border-radius: 0 0 12px 12px ;
+    padding:0 13px;
+}
+
+.errorInput{
+    width: 100%;
+    padding: 0 9px;
+    color: red;
+    font-size: 12px;
+}
+.captchaPic{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+}
+.captchaPic img{
+    width: 150px;
+    display: flex;
+}
+.captchaPic button{
+    width: 30px;
+    margin-right:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+}
+.btnForm{
+
+    width: 100%;
+    height: 35px;
+    background-color: green;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+}
+.updateCode{
+    width: 100%;
+    padding: 15px 10px;
+}
+.textUpdateCode{
+    color: #3a6291;
+}
+.formLeft{
+    width: 100%;
+}

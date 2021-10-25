@@ -86,7 +86,7 @@ class NavPc extends Component {
                             </div>
                         </div>
                         <ul className="menuPcUlSub">
-                            <li className=""><Link to="/user/showVerifyMobile">راهنمای سفارش کالا</Link></li>
+                            <li className=""><Link to="/user/verifyMobileInitial">راهنمای سفارش کالا</Link></li>
                             <li className=""><Link to="">راهنمای خرید کالا</Link></li>
                             <li className=""><Link to="">راهنمای فروشندگان</Link></li>
                             <li className=""><Link to="">راهنمای شبکه های اجتماعی</Link></li>
@@ -94,7 +94,7 @@ class NavPc extends Component {
                     </li>
 
                     <li className=""><Link to="/user/login">ورود</Link></li>
-                    <li className=""><Link to="/user/register">ثبت نام</Link></li>
+                    <li className=""><Link to="/user/getMobile">ثبت نام</Link></li>
 
                 </ul>
                 

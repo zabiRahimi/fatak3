@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useImperativeHandle, forwardRef } from 'react';
 import axios from 'axios';
-import $ from 'jquery';
+// import $ from 'jquery';
 const Captcha = forwardRef((props, ref) => {
     const [captcha, setCaptcha] = useState(null)
     const [captchaKey, setCaptchaKey] = useState('')
     const refreshCaptcha = () => {
         axios.get('/api/web/refreshCaptcha')
             .then(response => {
-                setCaptcha(response.data.url.img)
+                setCaptcha(response.data.url.img);
                 setCaptchaKey(response.data.url.key);
             })
     }
@@ -54,6 +54,7 @@ const Captcha = forwardRef((props, ref) => {
                     </div>
                     <input type="text" onFocus={props.backStyle} onInput={props.ChangeStyle} onBlur={props.handleCheckValue} id='captcha' placeholder='کد امنیتی' autoComplete="off" />
 
+                    {/* <input id='captchaKey' type="text" value={captchaKey} /> */}
                     <input id='captchaKey' type="hidden" value={captchaKey} />
                 </div>
                 <div className="errorInput errorCaptcha" id='errorCaptcha'></div>

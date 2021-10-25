@@ -11,6 +11,8 @@ return [
         'quality' => 90,
         'math' => false,
         'expire' => 60,
+        'fontColors' => ['#b30000', '#990000', '#4d0000', '#8c7373', '#120095', '#1200c2'],
+
         'encrypt' => true
     ],
     // 'default' => [

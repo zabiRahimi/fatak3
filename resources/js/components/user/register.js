@@ -21,7 +21,8 @@ function Register(props) {
         changeCaptcha.current.refreshCaptcha();
     },[])
     
-    const {changeCaptcha ,handleCheckValue,valTrue,valFalse,checkMobile,errorSubmit,backStyle,ChangeStyle}= useMethodsFormUser(path, element , setElement);const handleSubmit = (e) => {
+    const {changeCaptcha ,handleCheckValue,valTrue,valFalse,checkMobile,errorSubmit,backStyle,ChangeStyle}= useMethodsFormUser(path, element , setElement);
+    const handleSubmit = (e) => {
    e.preventDefault();
    
     let data = { ...element, captcha: $('#captcha').val(), key: $('#captchaKey').val() }

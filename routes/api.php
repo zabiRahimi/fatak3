@@ -26,16 +26,17 @@ Route::prefix('web')->namespace('App\Http\Controllers\Api\Web')->group(function(
  
   Route::post('/check','CheckSessionController@check');
   Route::get('/refreshCaptcha', 'CaptchaController@refreshCaptcha');
-  Route::prefix('authUser')->namespace('Auth\User')->group(function (){
+  Route::prefix('authUser')->namespace('Auth')->group(function (){
    /**  
     * وظیفه این روت ایجاد سشن برای ثبت نام است.
     * هنگام ورود کاربر به صفحه ثبت نام این روت فراخوانی می شود
   */
-  Route::get('/register','RegisterController@sessionRegister');
-  Route::post('/login','LoginController@login');
-  Route::post('/register','RegisterController@register');
-  Route::post('/verifyMobile','RegisterController@verifyMobile');
-  Route::post('/updateVerifyCokeMobile','RegisterController@updateVerifyCokeMobile');
+  Route::post('/getMobile','RegisterController2@getMobile');
+  Route::get('/register','RegisterController2@sessionRegister');
+  Route::post('/login','LoginController2@login');
+  Route::post('/register','RegisterController2@register');
+  Route::post('/verifyMobile','RegisterController2@verifyMobile');
+  Route::post('/updateVerifyCokeMobile','RegisterController2@updateVerifyCokeMobile');
 
   });
   // Route::post('/login','UserController@login');

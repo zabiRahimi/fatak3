@@ -14,9 +14,12 @@ import Contact from './contactUs/index.js';
 import Complaint from './complaint/index.js';
 import Order from './order/index.js';
 import User from './user/index.js';
+import GetMobile from './user/getMobile.js';
+import VerifyMobile from './user/verifyMobile.js';
 import Register from './user/register.js';
 import Login from './user/login.js';
-import ShowVerifyMobile from './user/showVerifyMobile.js';
+import VerifyMobileInitial from './user/verifyMobileInitial.js';
+
 
 
 
@@ -57,9 +60,11 @@ class App extends Component {
                             <Order />
                         </Route>
                         <Route path="user" element={<User />}>
+                            <Route path="getMobile" element={<GetMobile />} />
+                            <Route path="verifyMobileInitial" element={<VerifyMobileInitial />} />
+                            <Route path="verifyMobile" element={<VerifyMobile />} />
                             <Route path="register" element={<Register />} />
                             <Route path="login" element={<Login />} />
-                            <Route path="showVerifyMobile" element={<ShowVerifyMobile />} />
                         </Route>
 
                         <Route>

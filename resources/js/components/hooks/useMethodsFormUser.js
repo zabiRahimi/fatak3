@@ -17,6 +17,8 @@ const useMethodsFormUser = (path, element, setElement) => {
                 valTrue(idParent);
             })
             .catch((error) => {
+                // console.log(error.response.data);
+                chptchaErrorCangeStyle();
                 valFalse(idParent, errorDiv, error.response.data.errors[id]);
             })
 
@@ -107,7 +109,7 @@ const useMethodsFormUser = (path, element, setElement) => {
                 `<div class='alert alert-danger errorAll' >${errorMessage}</div> `
             );
         }
-        
+
     }
 
     /**
@@ -126,15 +128,15 @@ const useMethodsFormUser = (path, element, setElement) => {
             $(`#${idParent} i`).css("display", "none");
             const dviError = e.target.parentNode.parentNode.lastChild;
             dviError.innerHTML = '';
-            $(`.errorAll`).html('') ;
+            $(`.errorAll`).html('');
         } else {
             let valElement;
-            (errorStatus == 422 && Object.keys(errorData)[0]!='codeVerify') ? valElement = errorData : valElement = element;
-            
+            (errorStatus == 422 && Object.keys(errorData)[0] != 'codeVerify') ? valElement = errorData : valElement = element;
+
             for (let i in valElement) {
-            if (i == 'user_id' && Object.keys(errorData)[0]=='codeVerify') {
-                continue;
-            }
+                if (i == 'user_id' && Object.keys(errorData)[0] == 'codeVerify') {
+                    continue;
+                }
                 const idParent = document.getElementById(i).parentNode.id;
                 $(`#${idParent}`).removeClass('inputFromSelect');
                 $(`#${idParent}`).css("border", "1px solid #eaecef");
@@ -182,13 +184,13 @@ const useMethodsFormUser = (path, element, setElement) => {
      * کد کپتچا را تغییر می دهد
      * استایل باکس کپتچا را به حالت اول بر می گرداند
      */
-     const chptchaErrorCangeStyle=()=>{
+    const chptchaErrorCangeStyle = () => {
         $('#captcha').val('');
         changeCaptcha.current.refreshCaptcha();
         $(`#divCaptcha label`).css('display', 'none');
         $(`#divCaptcha`).removeClass('inputFromSelect');
         $(`#divCaptcha input`).css('direction', 'rtl');
-     }
+    }
 
     return { changeCaptcha, handleCheckValue, valTrue, valFalse, checkMobile, errorSubmit, backStyle, ChangeStyle };
 }

@@ -1,6 +1,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -1847,13 +1858,18 @@ module.exports = {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /**
+ * web web
  * Next, we will create a fresh React component instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
 
-__webpack_require__(/*! ./components/App */ "./resources/js/components/App.js");
+__webpack_require__(/*! ./components/web/App */ "./resources/js/components/web/App.js");
+/**
+ * api api
+ */
+//  require('./components/api/App');
 
 /***/ }),
 
@@ -1901,10 +1917,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/App.js":
-/*!****************************************!*\
-  !*** ./resources/js/components/App.js ***!
-  \****************************************/
+/***/ "./resources/js/components/web/App.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/web/App.js ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1916,22 +1932,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
-/* harmony import */ var _header_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header/index.js */ "./resources/js/components/header/index.js");
-/* harmony import */ var _nav_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nav/index.js */ "./resources/js/components/nav/index.js");
-/* harmony import */ var _menuMiddle_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menuMiddle/index.js */ "./resources/js/components/menuMiddle/index.js");
-/* harmony import */ var _aboutUs_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./aboutUs/index.js */ "./resources/js/components/aboutUs/index.js");
-/* harmony import */ var _content_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./content/index.js */ "./resources/js/components/content/index.js");
-/* harmony import */ var _footer_index_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./footer/index.js */ "./resources/js/components/footer/index.js");
-/* harmony import */ var _options_index_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./options/index.js */ "./resources/js/components/options/index.js");
-/* harmony import */ var _contactUs_index_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./contactUs/index.js */ "./resources/js/components/contactUs/index.js");
-/* harmony import */ var _complaint_index_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./complaint/index.js */ "./resources/js/components/complaint/index.js");
-/* harmony import */ var _order_index_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./order/index.js */ "./resources/js/components/order/index.js");
-/* harmony import */ var _user_index_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user/index.js */ "./resources/js/components/user/index.js");
-/* harmony import */ var _user_getMobile_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./user/getMobile.js */ "./resources/js/components/user/getMobile.js");
-/* harmony import */ var _user_verifyMobile_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./user/verifyMobile.js */ "./resources/js/components/user/verifyMobile.js");
-/* harmony import */ var _user_register_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./user/register.js */ "./resources/js/components/user/register.js");
-/* harmony import */ var _user_login_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./user/login.js */ "./resources/js/components/user/login.js");
-/* harmony import */ var _user_verifyMobileInitial_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./user/verifyMobileInitial.js */ "./resources/js/components/user/verifyMobileInitial.js");
+/* harmony import */ var _header_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header/index.js */ "./resources/js/components/web/header/index.js");
+/* harmony import */ var _nav_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nav/index.js */ "./resources/js/components/web/nav/index.js");
+/* harmony import */ var _menuMiddle_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menuMiddle/index.js */ "./resources/js/components/web/menuMiddle/index.js");
+/* harmony import */ var _aboutUs_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./aboutUs/index.js */ "./resources/js/components/web/aboutUs/index.js");
+/* harmony import */ var _content_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./content/index.js */ "./resources/js/components/web/content/index.js");
+/* harmony import */ var _footer_index_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./footer/index.js */ "./resources/js/components/web/footer/index.js");
+/* harmony import */ var _options_index_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./options/index.js */ "./resources/js/components/web/options/index.js");
+/* harmony import */ var _contactUs_index_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./contactUs/index.js */ "./resources/js/components/web/contactUs/index.js");
+/* harmony import */ var _complaint_index_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./complaint/index.js */ "./resources/js/components/web/complaint/index.js");
+/* harmony import */ var _order_index_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./order/index.js */ "./resources/js/components/web/order/index.js");
+/* harmony import */ var _user_index_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user/index.js */ "./resources/js/components/web/user/index.js");
+/* harmony import */ var _user_getMobile_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./user/getMobile.js */ "./resources/js/components/web/user/getMobile.js");
+/* harmony import */ var _user_verifyMobile_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./user/verifyMobile.js */ "./resources/js/components/web/user/verifyMobile.js");
+/* harmony import */ var _user_register_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./user/register.js */ "./resources/js/components/web/user/register.js");
+/* harmony import */ var _user_login_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./user/login.js */ "./resources/js/components/web/user/login.js");
+/* harmony import */ var _user_verifyMobileInitial_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./user/verifyMobileInitial.js */ "./resources/js/components/web/user/verifyMobileInitial.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2027,9 +2043,6 @@ var App = /*#__PURE__*/function (_Component) {
                 path: "verifyMobileInitial",
                 element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_user_verifyMobileInitial_js__WEBPACK_IMPORTED_MODULE_17__.default, {})
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_20__.Route, {
-                path: "verifyMobile",
-                element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_user_verifyMobile_js__WEBPACK_IMPORTED_MODULE_14__.default, {})
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_20__.Route, {
                 path: "register",
                 element: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(_user_register_js__WEBPACK_IMPORTED_MODULE_15__.default, {})
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_18__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_20__.Route, {
@@ -2079,10 +2092,10 @@ if (document.getElementById('app')) {
 
 /***/ }),
 
-/***/ "./resources/js/components/aboutUs/index.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/aboutUs/index.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/web/aboutUs/index.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/web/aboutUs/index.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2155,10 +2168,10 @@ var About = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/complaint/index.js":
-/*!****************************************************!*\
-  !*** ./resources/js/components/complaint/index.js ***!
-  \****************************************************/
+/***/ "./resources/js/components/web/complaint/index.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/web/complaint/index.js ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2231,10 +2244,10 @@ var Complaint = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/contactUs/index.js":
-/*!****************************************************!*\
-  !*** ./resources/js/components/contactUs/index.js ***!
-  \****************************************************/
+/***/ "./resources/js/components/web/contactUs/index.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/web/contactUs/index.js ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2307,10 +2320,10 @@ var Contact = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/content/index.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/content/index.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/web/content/index.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/web/content/index.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2320,7 +2333,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _showProSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./showProSlider */ "./resources/js/components/content/showProSlider.js");
+/* harmony import */ var _showProSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./showProSlider */ "./resources/js/components/web/content/showProSlider.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2382,10 +2395,10 @@ var Content = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/content/showProSlider.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/components/content/showProSlider.js ***!
-  \**********************************************************/
+/***/ "./resources/js/components/web/content/showProSlider.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/web/content/showProSlider.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2538,10 +2551,10 @@ var ShowProSlider = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/footer/index.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/footer/index.js ***!
-  \*************************************************/
+/***/ "./resources/js/components/web/footer/index.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/web/footer/index.js ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2611,10 +2624,10 @@ var Footer = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/header/head.js":
-/*!************************************************!*\
-  !*** ./resources/js/components/header/head.js ***!
-  \************************************************/
+/***/ "./resources/js/components/web/header/head.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/web/header/head.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2654,10 +2667,10 @@ function Head() {
 
 /***/ }),
 
-/***/ "./resources/js/components/header/index.js":
-/*!*************************************************!*\
-  !*** ./resources/js/components/header/index.js ***!
-  \*************************************************/
+/***/ "./resources/js/components/web/header/index.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/web/header/index.js ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2667,8 +2680,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _head_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./head.js */ "./resources/js/components/header/head.js");
-/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider.js */ "./resources/js/components/header/slider.js");
+/* harmony import */ var _head_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./head.js */ "./resources/js/components/web/header/head.js");
+/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slider.js */ "./resources/js/components/web/header/slider.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -2730,10 +2743,10 @@ var Header = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/header/slider.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/header/slider.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/web/header/slider.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/web/header/slider.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2823,10 +2836,10 @@ function Slider() {
 
 /***/ }),
 
-/***/ "./resources/js/components/hooks/captcha.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/hooks/captcha.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/web/hooks/captcha.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/web/hooks/captcha.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2867,7 +2880,7 @@ var Captcha = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(fun
       setCaptchaKey = _useState4[1];
 
   var refreshCaptcha = function refreshCaptcha() {
-    axios__WEBPACK_IMPORTED_MODULE_1___default().get('/api/web/refreshCaptcha').then(function (response) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get('/web/refreshCaptcha').then(function (response) {
       setCaptcha(response.data.url.img);
       setCaptchaKey(response.data.url.key);
     });
@@ -2962,10 +2975,10 @@ var Captcha = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(fun
 
 /***/ }),
 
-/***/ "./resources/js/components/hooks/useInputNumberCode.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/hooks/useInputNumberCode.js ***!
-  \*************************************************************/
+/***/ "./resources/js/components/web/hooks/useInputNumberCode.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/web/hooks/useInputNumberCode.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2975,7 +2988,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _useScrollTo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useScrollTo */ "./resources/js/components/hooks/useScrollTo.js");
+/* harmony import */ var _useScrollTo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useScrollTo */ "./resources/js/components/web/hooks/useScrollTo.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
@@ -2983,17 +2996,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
@@ -3003,22 +3005,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-var useInputNumberCode = function useInputNumberCode(lenghtNum) {
+var useInputNumberCode = function useInputNumberCode(setCodeInput, codeInput, lenghtNum, lable) {
   // const [element, setElement] = useState({
   //     code: 489,
   // });
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
-      _useState2 = _slicedToArray(_useState, 2),
-      codeInput = _useState2[0],
-      setCodeInput = _useState2[1];
-
+  // const [codeInput, setCodeInput] = useState('');
   var input = function input() {
     var rows = [];
 
     for (var i = 0; i < lenghtNum; i++) {
-      // note: we are adding a key prop here to allow react to uniquely identify each
-      // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
       rows.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
         type: "text",
         id: "code".concat(i),
@@ -3029,13 +3024,26 @@ var useInputNumberCode = function useInputNumberCode(lenghtNum) {
         maxLength: "1",
         onInput: function onInput(e) {
           return changeFocus(e, i);
+        },
+        onKeyDown: function onKeyDown(e) {
+          return backSpace(e);
         }
       }, i));
     }
 
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-      className: "divInputNumCode",
-      children: rows
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      className: "continerInputNumCode",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        htmlFor: "code0",
+        className: "lableInpuNumCode",
+        children: lable
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        className: "divInputNumCode",
+        children: rows
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        id: "errorInputNumCode",
+        className: "errorInput"
+      })]
     });
   };
 
@@ -3054,8 +3062,25 @@ var useInputNumberCode = function useInputNumberCode(lenghtNum) {
       document.getElementById("code".concat(key)).focus();
     }
 
-    if (key == lenghtNum) {
-      setCode();
+    setCode();
+  };
+  /**
+   * این متد فوکس را هنگامی که کاربر مقدار را پاک می‌کند به عقب بر می‌گرداند
+   * @param {*} e 
+   */
+
+
+  var backSpace = function backSpace(e) {
+    if (e.keyCode === 8) {
+      //چک می‌کند backSpace فشرده شده است.
+      var element = document.getElementById(e.target.id);
+      var key = parseInt(element.getAttribute('data-key')) - 1;
+
+      if ((0,lodash__WEBPACK_IMPORTED_MODULE_5__.isEmpty)(element.value) && key >= 0) {
+        //هنگامی که کاربر اقدام به پاک کردن مقدار می‌کند فوکوس باید در همان کادر باقی بماند و چنانچه پس از پاک کردن مقدار مبادرت به فشردن دکمه بک اسپیس کرد فوکوس به عقب جابه‌جا شود، این دستور  نیز همین مکانیزم را چک می کند
+        // همچنین چک می‌کند در کادر اول فوکوسی به کادر عقب که وجود ندارد انجام نشود
+        document.getElementById("code".concat(key)).focus();
+      }
     }
   };
 
@@ -3064,26 +3089,40 @@ var useInputNumberCode = function useInputNumberCode(lenghtNum) {
 
     for (var i = 0; i < lenghtNum; i++) {
       code = code + document.getElementById("code".concat(i)).value;
-    }
+    } // console.log(code);
+
 
     setCodeInput(parseInt(code.trim()));
   };
+  /**
+   * چنانچه کاربر اطلاعات نادرستی وارد کند متد زیر باقرمز کردن کادر فیلد و اعلام خطا هشدار لازم را می دهد
+   * @param idParent 
+   * @param errorDiv 
+   * @param errorMassege 
+   */
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-    children: [input(), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
-      children: codeInput
-    })]
-  });
+
+  var setError = function setError(errorMessage) {
+    // $('#' + idParent).css("border", "1px solid red");
+    // $(`#${idParent}`).addClass('inputFromSelect');
+    // $(`#${idParent} i.false`).css("display", "flex");
+    document.getElementById("errorInputNumCode").innerHTML = errorMessage;
+  };
+
+  return {
+    input: input,
+    setError: setError
+  };
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useInputNumberCode);
 
 /***/ }),
 
-/***/ "./resources/js/components/hooks/useMethodsFormUser.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/hooks/useMethodsFormUser.js ***!
-  \*************************************************************/
+/***/ "./resources/js/components/web/hooks/useMethodsFormUser.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/web/hooks/useMethodsFormUser.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3093,7 +3132,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _useScrollTo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useScrollTo */ "./resources/js/components/hooks/useScrollTo.js");
+/* harmony import */ var _useScrollTo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useScrollTo */ "./resources/js/components/web/hooks/useScrollTo.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
@@ -3323,6 +3362,23 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
     jquery__WEBPACK_IMPORTED_MODULE_4___default()("#divCaptcha").removeClass('inputFromSelect');
     jquery__WEBPACK_IMPORTED_MODULE_4___default()("#divCaptcha input").css('direction', 'rtl');
   };
+  /**
+   * هنگامی که یک این‌پوت به صورت پیش فرض یک مقداری دارد در ری‌اکت نمی‌شود
+   *  به راحتی اچ‌تی‌ام‌ال مقدار آن را تغییر داد، لذا باید با بکار گیری استیت و رویداد آن‌این‌پوت 
+   * این کار را انجام داد، به این صورت که هر بار کاربر مبادرت به تایپ حرفی کرد
+   *  در استیت ذخیره شود، این متد همین کار را انجام می دهد 
+   * @param {*} e 
+   */
+
+
+  var setValue = function setValue(e) {
+    var _e$target2 = e.target,
+        id = _e$target2.id,
+        value = _e$target2.value;
+    setElement(function (prev) {
+      return _objectSpread(_objectSpread({}, prev), {}, _defineProperty({}, id, value));
+    });
+  };
 
   return {
     changeCaptcha: changeCaptcha,
@@ -3332,7 +3388,8 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
     checkMobile: checkMobile,
     errorSubmit: errorSubmit,
     backStyle: backStyle,
-    ChangeStyle: ChangeStyle
+    ChangeStyle: ChangeStyle,
+    setValue: setValue
   };
 };
 
@@ -3340,10 +3397,10 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
 
 /***/ }),
 
-/***/ "./resources/js/components/hooks/useScrollTo.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/hooks/useScrollTo.js ***!
-  \******************************************************/
+/***/ "./resources/js/components/web/hooks/useScrollTo.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/web/hooks/useScrollTo.js ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3381,10 +3438,10 @@ var useScrollTo = function useScrollTo() {
 
 /***/ }),
 
-/***/ "./resources/js/components/hooks/useTitleForm.js":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/hooks/useTitleForm.js ***!
-  \*******************************************************/
+/***/ "./resources/js/components/web/hooks/useTitleForm.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/web/hooks/useTitleForm.js ***!
+  \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3405,10 +3462,10 @@ function useTitleForm(title) {
 
 /***/ }),
 
-/***/ "./resources/js/components/menuMiddle/addOrder.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/menuMiddle/addOrder.js ***!
-  \********************************************************/
+/***/ "./resources/js/components/web/menuMiddle/addOrder.js":
+/*!************************************************************!*\
+  !*** ./resources/js/components/web/menuMiddle/addOrder.js ***!
+  \************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3485,10 +3542,10 @@ var AddOrder = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/menuMiddle/followUpOrder.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/menuMiddle/followUpOrder.js ***!
-  \*************************************************************/
+/***/ "./resources/js/components/web/menuMiddle/followUpOrder.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/web/menuMiddle/followUpOrder.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3560,10 +3617,10 @@ var FollowUpOrder = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/menuMiddle/index.js":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/menuMiddle/index.js ***!
-  \*****************************************************/
+/***/ "./resources/js/components/web/menuMiddle/index.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/web/menuMiddle/index.js ***!
+  \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3575,8 +3632,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _addOrder_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./addOrder.js */ "./resources/js/components/menuMiddle/addOrder.js");
-/* harmony import */ var _followUpOrder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./followUpOrder.js */ "./resources/js/components/menuMiddle/followUpOrder.js");
+/* harmony import */ var _addOrder_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./addOrder.js */ "./resources/js/components/web/menuMiddle/addOrder.js");
+/* harmony import */ var _followUpOrder_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./followUpOrder.js */ "./resources/js/components/web/menuMiddle/followUpOrder.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -3641,10 +3698,10 @@ var MenuMiddle = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/nav/index.js":
-/*!**********************************************!*\
-  !*** ./resources/js/components/nav/index.js ***!
-  \**********************************************/
+/***/ "./resources/js/components/web/nav/index.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/web/nav/index.js ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3656,8 +3713,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _navPc_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navPc.js */ "./resources/js/components/nav/navPc.js");
-/* harmony import */ var _navMo_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./navMo.js */ "./resources/js/components/nav/navMo.js");
+/* harmony import */ var _navPc_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./navPc.js */ "./resources/js/components/web/nav/navPc.js");
+/* harmony import */ var _navMo_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./navMo.js */ "./resources/js/components/web/nav/navMo.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -3764,10 +3821,10 @@ var Nav = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/nav/navMo.js":
-/*!**********************************************!*\
-  !*** ./resources/js/components/nav/navMo.js ***!
-  \**********************************************/
+/***/ "./resources/js/components/web/nav/navMo.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/web/nav/navMo.js ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4173,10 +4230,10 @@ var NavMo = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/nav/navPc.js":
-/*!**********************************************!*\
-  !*** ./resources/js/components/nav/navPc.js ***!
-  \**********************************************/
+/***/ "./resources/js/components/web/nav/navPc.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/web/nav/navPc.js ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4491,10 +4548,10 @@ var NavPc = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/options/index.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/options/index.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/web/options/index.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/web/options/index.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4564,10 +4621,10 @@ var Options = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/order/index.js":
-/*!************************************************!*\
-  !*** ./resources/js/components/order/index.js ***!
-  \************************************************/
+/***/ "./resources/js/components/web/order/index.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/web/order/index.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4641,10 +4698,10 @@ var Order = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/user/getMobile.js":
-/*!***************************************************!*\
-  !*** ./resources/js/components/user/getMobile.js ***!
-  \***************************************************/
+/***/ "./resources/js/components/web/user/getMobile.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/web/user/getMobile.js ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4652,21 +4709,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ GetMobile)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/hooks/captcha.js");
-/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/hooks/useTitleForm.js");
-/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/hooks/useMethodsFormUser.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/web/hooks/captcha.js");
+/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/web/hooks/useTitleForm.js");
+/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/web/hooks/useMethodsFormUser.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -4687,24 +4754,63 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+ // import { isEmpty, set } from "lodash";
 
 
-function GetMobile() {
-  var navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_7__.useNavigate)();
-  var path = '/api/web/authUser/getMobile';
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    mobile: null
+function GetMobile(props) {
+  var navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_9__.useNavigate)();
+
+  var _useLocation = (0,react_router__WEBPACK_IMPORTED_MODULE_9__.useLocation)(),
+      state = _useLocation.state;
+
+  var path = '/web/authUser/getMobile';
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
+    mobile: ''
   }),
       _useState2 = _slicedToArray(_useState, 2),
       element = _useState2[0],
       setElement = _useState2[1];
 
-  var _useMethodsFormUser = (0,_hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__.default)(path, element, setElement),
+  function zabi() {
+    return _zabi.apply(this, arguments);
+  }
+
+  function _zabi() {
+    _zabi = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              if ((0,lodash__WEBPACK_IMPORTED_MODULE_7__.isEmpty)(state)) {
+                _context.next = 3;
+                break;
+              }
+
+              _context.next = 3;
+              return setElement(_defineProperty({}, 'mobile', state.mobile));
+
+            case 3:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+    return _zabi.apply(this, arguments);
+  }
+
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    zabi();
+  }, []);
+
+  var _useMethodsFormUser = (0,_hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_4__.default)(path, element, setElement),
       changeCaptcha = _useMethodsFormUser.changeCaptcha,
       handleCheckValue = _useMethodsFormUser.handleCheckValue,
       backStyle = _useMethodsFormUser.backStyle,
       ChangeStyle = _useMethodsFormUser.ChangeStyle,
+      setValue = _useMethodsFormUser.setValue,
       errorSubmit = _useMethodsFormUser.errorSubmit;
 
   var handleSubmit = function handleSubmit(e) {
@@ -4715,16 +4821,22 @@ function GetMobile() {
       key: $('#captchaKey').val()
     });
 
-    axios__WEBPACK_IMPORTED_MODULE_4___default().post(path, data, {
+    axios__WEBPACK_IMPORTED_MODULE_5___default().post(path, data, {
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
         'Content-Type': 'application/json; charset=utf-8'
       }
     }).then(function (response) {
-      console.log(response.data.code);
-      console.log(response.data.mobile);
-      console.log(response.data.cookie);
-      navigate('/user/verifyMobileInitial'); // navigate('/user/verifyMobileInitial',{state:{'code':response.data.code}});
+      // نکته ارسال کد بصورت موقت و فقط برای چک کردن کار کردن برنامه هست
+      //حتما باید این کد اصلاخ شود چون بسیار خطرناک
+      // استفاده از کلید چک برای این است که چک کنیم کاربر تنها از طریق دستور زیر به صفحه مورد نظر انتقال داده شده است
+      navigate('/user/verifyMobileInitial', {
+        state: {
+          'check': 'ok',
+          'mobile': element.mobile,
+          'code': response.data.code
+        }
+      }); // navigate('/user/verifyMobileInitial',{state:{'code':response.data.code}});
       // Swal.fire({
       //     position: 'center',
       //     icon: 'success',
@@ -4741,59 +4853,60 @@ function GetMobile() {
     });
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
     className: "formContainer",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
       className: "formRight",
-      children: [(0,_hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_2__.default)('ثبت موبایل'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
+      children: [(0,_hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_3__.default)('ثبت موبایل'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("form", {
         className: "form",
         id: "getMobile",
         method: "post",
         onSubmit: handleSubmit,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
           className: "errorAllContiner errorAll",
           id: "errorAll"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
           className: "groupInput",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
             className: "inputForm ",
             id: "divName",
             "data-lang": "num",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
               className: "divLabel",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("i", {
                 className: "far fa-check-circle true"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("i", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("i", {
                 className: "fas fa-exclamation false"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
                 htmlFor: "name",
                 children: "\u0645\u0648\u0628\u0627\u06CC\u0644"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
               type: "text",
               id: "mobile",
+              value: element.mobile,
               onFocus: backStyle,
-              onInput: ChangeStyle,
+              onInput: (ChangeStyle, setValue),
               onBlur: handleCheckValue,
               placeholder: "\u0645\u0648\u0628\u0627\u06CC\u0644",
               autoComplete: "off",
               autoFocus: true
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
             className: "errorInput"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_hooks_captcha__WEBPACK_IMPORTED_MODULE_1__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_hooks_captcha__WEBPACK_IMPORTED_MODULE_2__.default, {
           ref: changeCaptcha,
           backStyle: backStyle,
           ChangeStyle: ChangeStyle
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
           type: "submit",
           className: "btnForm",
           id: "",
           value: "\u062B\u0628\u062A"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
       className: "formLeft",
       children: "image"
     })]
@@ -4802,10 +4915,10 @@ function GetMobile() {
 
 /***/ }),
 
-/***/ "./resources/js/components/user/index.js":
-/*!***********************************************!*\
-  !*** ./resources/js/components/user/index.js ***!
-  \***********************************************/
+/***/ "./resources/js/components/web/user/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/web/user/index.js ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4828,10 +4941,10 @@ function User() {
 
 /***/ }),
 
-/***/ "./resources/js/components/user/login.js":
-/*!***********************************************!*\
-  !*** ./resources/js/components/user/login.js ***!
-  \***********************************************/
+/***/ "./resources/js/components/web/user/login.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/web/user/login.js ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4851,10 +4964,10 @@ function Login() {
 
 /***/ }),
 
-/***/ "./resources/js/components/user/register.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/user/register.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/web/user/register.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/web/user/register.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4864,9 +4977,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
-/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/hooks/useTitleForm.js");
-/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/hooks/captcha.js");
-/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/hooks/useMethodsFormUser.js");
+/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/web/hooks/useTitleForm.js");
+/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/web/hooks/captcha.js");
+/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/web/hooks/useMethodsFormUser.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
@@ -5086,10 +5199,10 @@ function Register(props) {
 
 /***/ }),
 
-/***/ "./resources/js/components/user/verifyMobile.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/user/verifyMobile.js ***!
-  \******************************************************/
+/***/ "./resources/js/components/web/user/verifyMobile.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/web/user/verifyMobile.js ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5098,13 +5211,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ VerifyMobile)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/hooks/useTitleForm.js");
-/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/hooks/captcha.js");
+/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/web/hooks/useTitleForm.js");
+/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/web/hooks/captcha.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/hooks/useMethodsFormUser.js");
+/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/web/hooks/useMethodsFormUser.js");
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
@@ -5356,10 +5469,10 @@ function VerifyMobile() {
 
 /***/ }),
 
-/***/ "./resources/js/components/user/verifyMobileInitial.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/user/verifyMobileInitial.js ***!
-  \*************************************************************/
+/***/ "./resources/js/components/web/user/verifyMobileInitial.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/web/user/verifyMobileInitial.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5367,22 +5480,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ VerifyMobileInitial)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/hooks/useTitleForm.js");
-/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/hooks/captcha.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/hooks/useMethodsFormUser.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
-/* harmony import */ var _hooks_useInputNumberCode__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../hooks/useInputNumberCode */ "./resources/js/components/hooks/useInputNumberCode.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/web/hooks/useTitleForm.js");
+/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/web/hooks/captcha.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/web/hooks/useMethodsFormUser.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
+/* harmony import */ var _hooks_useInputNumberCode__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../hooks/useInputNumberCode */ "./resources/js/components/web/hooks/useInputNumberCode.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -5404,32 +5521,44 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
- // از این متد برای احراز موبایل کاربر در ثبت اولیه استفاده می شود
+
+ // import { isEmpty } from 'lodash';
+// از این متد برای احراز موبایل کاربر در ثبت اولیه استفاده می شود
 
 
 
-function VerifyMobileInitial() {
-  var path = '/api/web/authUser/verifyMobileInitial';
+function VerifyMobileInitial(props) {
+  var navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_10__.useNavigate)();
+  var path = '/web/authUser/verifyMobileInitial';
 
-  var _useLocation = (0,react_router__WEBPACK_IMPORTED_MODULE_8__.useLocation)(),
+  var _useLocation = (0,react_router__WEBPACK_IMPORTED_MODULE_10__.useLocation)(),
       state = _useLocation.state;
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    code: null
-  }),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
-      element = _useState2[0],
-      setElement = _useState2[1];
+      codeInput = _useState2[0],
+      setCodeInput = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0),
       _useState4 = _slicedToArray(_useState3, 2),
       seconds = _useState4[0],
       setSeconds = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(1),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(2),
       _useState6 = _slicedToArray(_useState5, 2),
       minutes = _useState6[0],
       setMinutes = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(''),
+      _useState8 = _slicedToArray(_useState7, 2),
+      mobile = _useState8[0],
+      setMobile = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(''),
+      _useState10 = _slicedToArray(_useState9, 2),
+      code = _useState10[0],
+      setCode = _useState10[1]; //این کد فقط برای تست برنامه و موقت است
+
 
   function updateTime() {
     if (minutes == 0 && seconds == 0) {} else {
@@ -5446,92 +5575,152 @@ function VerifyMobileInitial() {
     }
   }
 
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    // با دستور زیر چک می‌کنیم که کاربر تنها از صفحه گت موبایل وارد شده باشد
+    // With the following command, we check that the user has logged in only from getMobile
+    if ((0,lodash__WEBPACK_IMPORTED_MODULE_8__.isEmpty)(state) || 'check' in state == false || state.check != 'ok') {
+      navigate('/user/getMobile');
+    }
+
+    setMobile(state.mobile);
+    setCode(state.code); //موقت
+
     var token = setTimeout(updateTime, 1000);
     showLink();
     return function cleanUp() {
       clearTimeout(token);
     };
-  });
-
-  var _useMethodsFormUser = (0,_hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_5__.default)(path, element, setElement),
-      changeCaptcha = _useMethodsFormUser.changeCaptcha,
-      handleCheckValue = _useMethodsFormUser.handleCheckValue,
-      backStyle = _useMethodsFormUser.backStyle,
-      ChangeStyle = _useMethodsFormUser.ChangeStyle,
-      errorSubmit = _useMethodsFormUser.errorSubmit; // useEffect(() => {
+  }); // const {changeCaptcha,handleCheckValue,backStyle, ChangeStyle,errorSubmit} = useMethodsFormUser(path,element, setElement);
+  // useEffect(() => {
   //     // console.log(state);
   //     // changeCaptcha.current.refreshCaptcha();
   // }, []);
 
+  var _useInputNumberCode = (0,_hooks_useInputNumberCode__WEBPACK_IMPORTED_MODULE_7__.default)(setCodeInput, codeInput, 5, 'کد تایید '),
+      input = _useInputNumberCode.input,
+      setError = _useInputNumberCode.setError;
 
   var handleSubmit = function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // let data = { ...element}
 
-    var data = _objectSpread({}, element);
-
-    axios.post(path, data, {
+    axios.post(path, {
+      'code': codeInput
+    }, {
       headers: {
-        'X-CSRF-TOKEN': jquery__WEBPACK_IMPORTED_MODULE_4___default()('meta[name="csrf-token"]').attr('content'),
+        'X-CSRF-TOKEN': jquery__WEBPACK_IMPORTED_MODULE_5___default()('meta[name="csrf-token"]').attr('content'),
         'Content-Type': 'application/json; charset=utf-8'
       }
     }).then(function (response) {
       // console.log('ok zabi');
       // navigate('/user/verifyMobile',{state:{'user_id':response.data.user_id,'code':response.data.code}});
-      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
-        position: 'center',
-        icon: 'success',
-        title: 'ثبت نام با موفقیت انجام شد .',
-        showConfirmButton: false,
-        timer: 3000
+      navigate('/user/register', {
+        state: {
+          'check': 'ok'
+        }
       });
-    })["catch"](function (error) {
-      var firstElementError = Object.keys(error.response.data.errors)[0];
-      console.log(firstElementError);
+      console.log(response); // Swal.fire({
+      //     position: 'center',
+      //     icon: 'success',
+      //     title: 'ثبت نام با موفقیت انجام شد .',
+      //     showConfirmButton: false,
+      //     timer: 3000
+      // })
+    })["catch"]( /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(error) {
+        var firstElementError;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (!(error.response.status == 422)) {
+                  _context.next = 9;
+                  break;
+                }
 
-      if (firstElementError != 'codeVerify') {
-        errorSubmit(e, error.response.status, error.response.data.errors, element, 'verifyMobile');
-      } else {
-        errorCodeVerify(e, error.response.status, error.response.data.errors, element, 'verifyMobile');
-      }
-    });
+                firstElementError = Object.keys(error.response.data.errors)[0];
+
+                if (!(firstElementError == 'codeExpire')) {
+                  _context.next = 6;
+                  break;
+                }
+
+                _context.next = 5;
+                return navigate('/user/getMobile');
+
+              case 5:
+                sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
+                  position: 'center',
+                  icon: 'warning',
+                  title: 'کد ارسال شده به موبایل شما منقضی شده است، مجددا تلاش کنید.',
+                  showConfirmButton: true,
+                  confirmButtonText: 'متوجه شدم' // timer: 3000
+
+                });
+
+              case 6:
+                setError(error.response.data.errors[firstElementError]); // // setError('vnd');
+                // errorSubmit(e, error.response.status, error.response.data.errors, element, 'verifyMobile');
+
+                _context.next = 10;
+                break;
+
+              case 9:
+                setError('مشکلی به وجود آمده است، دوباره تلاش کنید.'); // errorCodeVerify(e, error.response.status, error.response.data.errors, element, 'verifyMobile')
+
+              case 10:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function (_x) {
+        return _ref.apply(this, arguments);
+      };
+    }());
   };
 
   var errorCodeVerify = function errorCodeVerify(e, errorStatus, errorData, element, idForm) {
-    var offset = jquery__WEBPACK_IMPORTED_MODULE_4___default()(".errorAll").offset();
-    sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+    var offset = jquery__WEBPACK_IMPORTED_MODULE_5___default()(".errorAll").offset();
+    sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
       position: 'center',
       icon: 'warning',
       text: errorData.codeVerify,
       showConfirmButton: false,
       timer: 3000,
       didClose: function didClose() {
-        return jquery__WEBPACK_IMPORTED_MODULE_4___default()(document).scrollTop(offset.top - 80);
+        return jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).scrollTop(offset.top - 80);
       }
     });
     backStyle(e, errorStatus, errorData, element);
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()(document).scrollTop(offset.top - 80);
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(idForm)).trigger('reset'); // for (let i in element) {
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).scrollTop(offset.top - 80);
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(idForm)).trigger('reset'); // for (let i in element) {
     //     setElement(perv => ({ ...perv, [i]: null }));
     // }
 
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()('.errorAll').html("<div class='alert alert-danger errorAll' >".concat(errorData.codeVerify, "</div> "));
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.errorAll').html("<div class='alert alert-danger errorAll' >".concat(errorData.codeVerify, "</div> "));
   };
 
   var updateCodeMobile = function updateCodeMobile() {
-    var data = {
-      'user_id': element.user_id
-    };
-    axios.post('/api/web/authUser/updateCodeMobileInitial', data, {
+    // let data = { 'user_id': element.user_id }
+    axios.post('web/authUser/updateCodeMobileInitial', {
       headers: {
-        'X-CSRF-TOKEN': jquery__WEBPACK_IMPORTED_MODULE_4___default()('meta[name="csrf-token"]').attr('content'),
+        'X-CSRF-TOKEN': jquery__WEBPACK_IMPORTED_MODULE_5___default()('meta[name="csrf-token"]').attr('content'),
         'Content-Type': 'application/json; charset=utf-8'
       }
     }).then(function (response) {
-      console.log(response); // navigate('/user/verifyMobile',{state:{'user_id':response.data.user_id,'code':response.data.code}});
+      console.log(response); // دستور زیر فقط برای چک کردن برنامه هست
+      //این کد باید حتما پاک شود
 
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()('#codeV').html(response.data.code);
-      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+      navigate('/user/verifyMobileInitial', {
+        state: {
+          'mobile': response.data.mobile,
+          'code': response.data.code
+        }
+      }); // navigate('/user/verifyMobile',{state:{'user_id':response.data.user_id,'code':response.data.code}});
+
+      sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
         position: 'center',
         icon: 'success',
         title: 'کد با موفقیت ارسال شد .',
@@ -5548,44 +5737,62 @@ function VerifyMobileInitial() {
 
   var showLink = function showLink() {
     if (minutes == 0 && seconds == 0) {
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()('.linkUpdateCode').css('display', 'flex');
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()('.textUpdateCode').css('display', 'none');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.linkUpdateCode').css('display', 'flex');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.textUpdateCode').css('display', 'none');
     } else {
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()('.linkUpdateCode').css('display', 'none');
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()('.textUpdateCode').css('display', 'flex');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.linkUpdateCode').css('display', 'none');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.textUpdateCode').css('display', 'flex');
     }
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+  var backPage = function backPage() {
+    // ,{state:{'user_id':response.data.user_id,'code':response.data.code}}
+    navigate('/user/getMobile', {
+      state: {
+        'mobile': state.mobile
+      }
+    });
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
     className: "formContainer",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
       className: "formRight",
-      children: [(0,_hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_1__.default)('تایید موبایل'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
+      children: [(0,_hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_2__.default)('تایید موبایل'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("button", {
+        onClick: backPage,
+        children: "\u0628\u0627\u0632\u06AF\u0634\u062A \u0648 \u0627\u0635\u0644\u0627\u062D \u0645\u0648\u0628\u0627\u06CC\u0644"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        children: mobile
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        children: code
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("form", {
         className: "form",
         id: "verifyMobileInitial",
         method: "post",
         onSubmit: handleSubmit,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
           className: "errorAllContiner errorAll",
           id: "errorAll"
-        }), (0,_hooks_useInputNumberCode__WEBPACK_IMPORTED_MODULE_6__.default)(5), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
+        }), input(), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+          children: [codeInput, " "]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("input", {
           type: "submit",
           className: "btnForm",
           id: "",
           value: "\u062B\u0628\u062A"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
           className: "updateCode",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("a", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("a", {
             className: "linkUpdateCode",
             onClick: updateCodeMobile,
             children: "\u0627\u0631\u0633\u0627\u0644 \u0645\u062C\u062F\u062F \u06A9\u062F"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
             className: "textUpdateCode",
             children: ["\u0627\u0631\u0633\u0627\u0644 \u0645\u062C\u062F\u062F \u06A9\u062F \u067E\u0633 \u0627\u0632 ", minutes, ":", seconds]
           })]
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
       className: "formLeft",
       children: "image"
     })]
@@ -75931,6 +76138,764 @@ if (false) {} else {
 
 if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/react-jsx-runtime.development.js */ "./node_modules/react/cjs/react-jsx-runtime.development.js");
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      define(prototype, method, function(arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  define(Gp, toStringTagSymbol, "Generator");
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : 0
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
 }
 
 

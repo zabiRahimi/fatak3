@@ -1,14 +1,19 @@
+.continerInputNumCode{
+    width: 100%;
+    margin: 25px 0;
+}
+.lableInpuNumCode{
+    color: #2e4a58;
+}
+.divInputNumCode{
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    direction: ltr;
+    justify-content: space-between;
+}
 .inputNumCode{
     width: 35px;
     display: inline-flex;
     text-align: center;
-    // border: none;
-}
-.divInputNumCode{
-    width: 100%;
-    margin: 25px 0;
-    // background-color: red;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
 }

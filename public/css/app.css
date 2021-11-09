@@ -16992,16 +16992,25 @@ readers do not read off random characters that represent icons */
   align-items: center;
 }
 
-.inputNumCode {
-  width: 35px;
-  display: inline-flex;
-  text-align: center;
+.continerInputNumCode {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.lableInpuNumCode {
+  color: #2e4a58;
 }
 
 .divInputNumCode {
   width: 100%;
-  margin: 25px 0;
+  margin: 5px 0;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
+  direction: ltr;
+  justify-content: space-between;
+}
+
+.inputNumCode {
+  width: 35px;
+  display: inline-flex;
+  text-align: center;
 }

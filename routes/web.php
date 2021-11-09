@@ -17,6 +17,34 @@ use Illuminate\Support\Facades\Route;
 
 
 // Auth::routes();
+Route::prefix('web')->namespace('App\Http\Controllers\Web')->group(function(){
+  
+ 
+  Route::post('/check','CheckSessionController@check');
+  Route::get('/refreshCaptcha', 'CaptchaController@refreshCaptcha');
+  Route::prefix('authUser')->namespace('Auth')->group(function (){
+   /**  
+    * وظیفه این روت ایجاد سشن برای ثبت نام است.
+    * هنگام ورود کاربر به صفحه ثبت نام این روت فراخوانی می شود
+  */
+  Route::post('/getMobile','RegisterController@getMobile');
+  Route::post('/verifyMobileInitial','RegisterController@verifyMobileInitial');
+  Route::post('/updateCodeMobileInitial','RegisterController@updateCodeMobileInitial');
+  // Route::get('/register','RegisterController@sessionRegister');
+  Route::post('/login','LoginController2@login');
+  Route::post('/register','RegisterController@register');
+  Route::post('/verifyMobile','RegisterController@verifyMobile');
+  // Route::post('/updateVerifyCokeMobile','RegisterController@updateVerifyCokeMobile');
+
+  });
+  // Route::post('/login','UserController@login');
+  // Route::post('/register','Auth\RegisterController@create');
+  // Route::get('/user',function(){
+  //   return 'ok';
+  // });
+  
+  
+ });
 // Route::prefix('web')->namespace('App\Http\Controllers\Api\Web')->group(function(){
     
 //     Route::post('/check','CheckSessionController@check');

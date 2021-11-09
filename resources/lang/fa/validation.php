@@ -32,7 +32,7 @@ return [
     'captcha'              => 'کد امنیتی را صحیح وارد کنید',
     'mobile'              => 'موبایل را صحیح وارد کنید .',
     'codemly'     =>'کد ملی ده رقمی را صحیح وارد کنید .',
-    'tel'              => 'تلفن را صیح وارد کنید .',
+    'tel'              => 'تلفن را صحیح وارد کنید .',
     'address'          =>'آدرس را صحیح و به فارسی وارد کنید .',
     'codepost'              => 'کد پستی را صحیح وارد کنید .',
     'pass'              => ':attribute فقط شامل حروف انگلیسی ، اعداد ، "-" و "_"باید باشد .',
@@ -43,7 +43,7 @@ return [
     'date'                 => 'The :attribute is not a valid date.',
     'date_format'          => 'The :attribute does not match the format :format.',
     'different'            => 'The :attribute and :other must be different.',
-    'digits'               => 'The :attribute must be :digits digits.',
+    'digits'               => ':attribute باید :digits رقم باشد.',
     'digits_between'       => 'The :attribute must be between :min and :max digits.',
     'dimensions'           => 'The :attribute has invalid image dimensions.',
     'distinct'             => 'The :attribute field has a duplicate value.',
@@ -194,6 +194,7 @@ return [
       'question' => 'پرسش',
       'answer' => 'پاسخ',
       'nazar' => 'نظر',
+      'code' => 'کد',
     ],
 
 ];

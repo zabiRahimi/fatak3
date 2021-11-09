@@ -4709,31 +4709,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ GetMobile)
 /* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/web/hooks/captcha.js");
-/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/web/hooks/useTitleForm.js");
-/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/web/hooks/useMethodsFormUser.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/web/hooks/captcha.js");
+/* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/web/hooks/useTitleForm.js");
+/* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/web/hooks/useMethodsFormUser.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -4759,53 +4751,32 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function GetMobile(props) {
-  var navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_9__.useNavigate)();
+  var navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_8__.useNavigate)();
 
-  var _useLocation = (0,react_router__WEBPACK_IMPORTED_MODULE_9__.useLocation)(),
+  var _useLocation = (0,react_router__WEBPACK_IMPORTED_MODULE_8__.useLocation)(),
       state = _useLocation.state;
 
   var path = '/web/authUser/getMobile';
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     mobile: ''
   }),
       _useState2 = _slicedToArray(_useState, 2),
       element = _useState2[0],
-      setElement = _useState2[1];
+      setElement = _useState2[1]; // async function zabi(){
+  //     if(!isEmpty(state)){
+  //         await setElement({ ['mobile']: state.mobile })
+  //         }
+  // }
 
-  function zabi() {
-    return _zabi.apply(this, arguments);
-  }
 
-  function _zabi() {
-    _zabi = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              if ((0,lodash__WEBPACK_IMPORTED_MODULE_7__.isEmpty)(state)) {
-                _context.next = 3;
-                break;
-              }
-
-              _context.next = 3;
-              return setElement(_defineProperty({}, 'mobile', state.mobile));
-
-            case 3:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }));
-    return _zabi.apply(this, arguments);
-  }
-
-  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    zabi();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (!(0,lodash__WEBPACK_IMPORTED_MODULE_6__.isEmpty)(state)) {
+      setElement(_defineProperty({}, 'mobile', state.mobile));
+    }
   }, []);
 
-  var _useMethodsFormUser = (0,_hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_4__.default)(path, element, setElement),
+  var _useMethodsFormUser = (0,_hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__.default)(path, element, setElement),
       changeCaptcha = _useMethodsFormUser.changeCaptcha,
       handleCheckValue = _useMethodsFormUser.handleCheckValue,
       backStyle = _useMethodsFormUser.backStyle,
@@ -4821,7 +4792,7 @@ function GetMobile(props) {
       key: $('#captchaKey').val()
     });
 
-    axios__WEBPACK_IMPORTED_MODULE_5___default().post(path, data, {
+    axios__WEBPACK_IMPORTED_MODULE_4___default().post(path, data, {
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
         'Content-Type': 'application/json; charset=utf-8'
@@ -4836,52 +4807,42 @@ function GetMobile(props) {
           'mobile': element.mobile,
           'code': response.data.code
         }
-      }); // navigate('/user/verifyMobileInitial',{state:{'code':response.data.code}});
-      // Swal.fire({
-      //     position: 'center',
-      //     icon: 'success',
-      //     title: `کد تایید موبایل به شماره ${element.mobile} ارسال شد. کد را وارد کنید.`,
-      //     showConfirmButton: false,
-      //     timer: 6000
-      // })
+      });
     })["catch"](function (error) {
-      console.log(error);
-      console.log(error.response.data);
       var firstElementError = Object.keys(error.response.data.errors)[0];
-      console.log(firstElementError);
       errorSubmit(e, error.response.status, error.response.data.errors, element);
     });
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
     className: "formContainer",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: "formRight",
-      children: [(0,_hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_3__.default)('ثبت موبایل'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("form", {
+      children: [(0,_hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_2__.default)('ثبت موبایل'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("form", {
         className: "form",
         id: "getMobile",
         method: "post",
         onSubmit: handleSubmit,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
           className: "errorAllContiner errorAll",
           id: "errorAll"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
           className: "groupInput",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
             className: "inputForm ",
             id: "divName",
             "data-lang": "num",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
               className: "divLabel",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("i", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("i", {
                 className: "far fa-check-circle true"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("i", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("i", {
                 className: "fas fa-exclamation false"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("label", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("label", {
                 htmlFor: "name",
                 children: "\u0645\u0648\u0628\u0627\u06CC\u0644"
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
               type: "text",
               id: "mobile",
               value: element.mobile,
@@ -4892,21 +4853,21 @@ function GetMobile(props) {
               autoComplete: "off",
               autoFocus: true
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: "errorInput"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_hooks_captcha__WEBPACK_IMPORTED_MODULE_2__.default, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_hooks_captcha__WEBPACK_IMPORTED_MODULE_1__.default, {
           ref: changeCaptcha,
           backStyle: backStyle,
           ChangeStyle: ChangeStyle
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
           type: "submit",
           className: "btnForm",
           id: "",
           value: "\u062B\u0628\u062A"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
       className: "formLeft",
       children: "image"
     })]

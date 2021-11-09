@@ -17,14 +17,16 @@ export default function GetMobile(props) {
     const [element, setElement] = useState({
         mobile: '',
     });
-async function zabi(){
-    if(!isEmpty(state)){
-        await setElement({ ['mobile']: state.mobile })
-        }
-}
+// async function zabi(){
+//     if(!isEmpty(state)){
+//         await setElement({ ['mobile']: state.mobile })
+//         }
+// }
     useEffect(() => {
-        zabi();
-    }, [])
+        if(!isEmpty(state)){
+            setElement({ ['mobile']: state.mobile });
+            }
+    }, []);
 
     const { changeCaptcha, handleCheckValue, backStyle, ChangeStyle, setValue, errorSubmit } = useMethodsFormUser(path, element, setElement);
     const handleSubmit = (e) => {
@@ -36,26 +38,10 @@ async function zabi(){
                 //حتما باید این کد اصلاخ شود چون بسیار خطرناک
                 // استفاده از کلید چک برای این است که چک کنیم کاربر تنها از طریق دستور زیر به صفحه مورد نظر انتقال داده شده است
                 navigate('/user/verifyMobileInitial',{state:{'check':'ok','mobile':element.mobile , 'code':response.data.code}});
-                // navigate('/user/verifyMobileInitial',{state:{'code':response.data.code}});
-
-
-                // Swal.fire({
-                //     position: 'center',
-                //     icon: 'success',
-                //     title: `کد تایید موبایل به شماره ${element.mobile} ارسال شد. کد را وارد کنید.`,
-                //     showConfirmButton: false,
-                //     timer: 6000
-                // })
             })
             .catch(error => {
-                console.log(error);
-                console.log(error.response.data);
-
                 const firstElementError = Object.keys(error.response.data.errors)[0];
-                console.log(firstElementError);
                 errorSubmit(e, error.response.status, error.response.data.errors, element);
-
-
             })
     }
     return (

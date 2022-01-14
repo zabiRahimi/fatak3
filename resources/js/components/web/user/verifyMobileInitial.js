@@ -37,7 +37,7 @@ export default function VerifyMobileInitial(props) {
     useEffect(() => {
     // با دستور زیر چک می‌کنیم که کاربر تنها از صفحه گت موبایل وارد شده باشد
     // With the following command, we check that the user has logged in only from getMobile
-        if(isEmpty(state) || ('check' in state) == false || state.check!='ok'  ){
+        if(isEmpty(state) || ('access' in state) == false || state.access!=true  ){
             navigate('/user/getMobile')
         }
         setMobile(state.mobile);
@@ -58,26 +58,12 @@ export default function VerifyMobileInitial(props) {
 
      const  handleSubmit = (e) => {
         e.preventDefault();
-        // let data = { ...element}
        axios.post(path, {'code':codeInput}, { headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'), 'Content-Type': 'application/json; charset=utf-8' } })
             .then(response => {
-                // console.log('ok zabi');
-                // navigate('/user/verifyMobile',{state:{'user_id':response.data.user_id,'code':response.data.code}});
-                navigate('/user/register',{state:{'check':'ok'}});
-                console.log(response);
-                // Swal.fire({
-                //     position: 'center',
-                //     icon: 'success',
-                //     title: 'ثبت نام با موفقیت انجام شد .',
-                //     showConfirmButton: false,
-                //     timer: 3000
-                // })
+                navigate('/user/register',{state:{'access':true}});
             })
             .catch(async error => {
-
-                // console.log(error.response);
                  if(error.response.status==422){
-                    
                     const firstElementError =Object.keys(error.response.data.errors)[0];
                     if(firstElementError=='codeExpire'){
                        await navigate('/user/getMobile');
@@ -129,21 +115,20 @@ export default function VerifyMobileInitial(props) {
         // let data = { 'user_id': element.user_id }
         axios.post('web/authUser/updateCodeMobileInitial', { headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'), 'Content-Type': 'application/json; charset=utf-8' } })
             .then(response => {
-                console.log(response);
                 // دستور زیر فقط برای چک کردن برنامه هست
                 //این کد باید حتما پاک شود
                 navigate('/user/verifyMobileInitial',{state:{'mobile':response.data.mobile , 'code':response.data.code}});
 
                 // navigate('/user/verifyMobile',{state:{'user_id':response.data.user_id,'code':response.data.code}});
                 
-                Swal.fire({
-                    position: 'center',
-                    icon: 'success',
-                    title: 'کد با موفقیت ارسال شد .',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    didClose: () => { setMinutes(1) }
-                })
+                // Swal.fire({
+                //     position: 'center',
+                //     icon: 'success',
+                //     title: 'کد با موفقیت ارسال شد .',
+                //     showConfirmButton: false,
+                //     timer: 3000,
+                //     didClose: () => { setMinutes(1) }
+                // })
             })
             .catch(error => {
 
@@ -158,7 +143,6 @@ export default function VerifyMobileInitial(props) {
         } else {
             $('.linkUpdateCode').css('display', 'none');
             $('.textUpdateCode').css('display', 'flex');
-
         }
     }
     const backPage=()=>{
@@ -176,24 +160,15 @@ export default function VerifyMobileInitial(props) {
                 <div>{code}</div>
 
                 <form className='form' id='verifyMobileInitial' method='post' onSubmit={handleSubmit}>
-                
-                    
                     <div className='errorAllContiner errorAll' id='errorAll'></div>
-                    
                     {input()}
                     <div>{codeInput} </div>
-
-
-
-
                     {/* < Captcha ref={changeCaptcha} backStyle={backStyle} ChangeStyle={ChangeStyle} /> */}
                     <input type="submit" className='btnForm' id="" value='ثبت' />
                     <div className="updateCode">
                         <a className='linkUpdateCode' onClick={updateCodeMobile}>ارسال مجدد کد</a>
                         <div className="textUpdateCode">ارسال مجدد کد پس از {minutes}:{seconds}</div>
                     </div>
-
-
                 </form>
             </div>
             <div className="formLeft">

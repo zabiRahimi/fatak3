@@ -19,7 +19,7 @@ class User extends Authenticatable
     protected $fillable = [
         'user_name',
         'email',
-        'mobile',
+        // 'mobile',
         'password',
         'api_token'
     ];
@@ -35,17 +35,22 @@ class User extends Authenticatable
         'api_token'
     ];
 
+    public function verify_code_mobiles()
+    {
+        return $this->hasOne(MobileUser::class);
+    }
+
     /**
      * The attributes that should be cast to native types.
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    // ];
 
-    public function verify_code_mobiles()
-    {
-        return $this->hasOne(VerifyCodeMobile::class);
-    }
+    // public function verify_code_mobiles()
+    // {
+    //     return $this->hasOne(VerifyCodeMobile::class);
+    // }
 }

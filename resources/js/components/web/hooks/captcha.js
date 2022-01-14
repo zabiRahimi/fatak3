@@ -4,10 +4,10 @@ import axios from 'axios';
 const Captcha = forwardRef((props, ref) => {
     const [captcha, setCaptcha] = useState(null)
     const [captchaKey, setCaptchaKey] = useState('')
-    const refreshCaptcha = () => {
-        axios.get('/web/refreshCaptcha')
-            .then(response => {
-                setCaptcha(response.data.url.img);
+    const refreshCaptcha =async() => {
+       await axios.get('/web/refreshCaptcha')
+            .then( response => {
+                 setCaptcha(response.data.url.img);
                 setCaptchaKey(response.data.url.key);
             })
     }
@@ -17,8 +17,9 @@ const Captcha = forwardRef((props, ref) => {
     }))
 
     useEffect(() => {
-        refreshCaptcha()
-    }, [])
+                 refreshCaptcha()
+    }, []);
+    
     // const handleFocus = () => {
     //             $('.captchaInput').css('border-color', '#ced4da');
     //             $('.captchaFeedback').html(' ');

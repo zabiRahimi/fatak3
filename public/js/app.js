@@ -2847,10 +2847,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -2868,30 +2876,48 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var Captcha = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(function (props, ref) {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+var Captcha = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_1__.forwardRef)(function (props, ref) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
       captcha = _useState2[0],
       setCaptcha = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(''),
       _useState4 = _slicedToArray(_useState3, 2),
       captchaKey = _useState4[0],
       setCaptchaKey = _useState4[1];
 
-  var refreshCaptcha = function refreshCaptcha() {
-    axios__WEBPACK_IMPORTED_MODULE_1___default().get('/web/refreshCaptcha').then(function (response) {
-      setCaptcha(response.data.url.img);
-      setCaptchaKey(response.data.url.key);
-    });
-  };
+  var refreshCaptcha = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return axios__WEBPACK_IMPORTED_MODULE_2___default().get('/web/refreshCaptcha').then(function (response) {
+                setCaptcha(response.data.url.img);
+                setCaptchaKey(response.data.url.key);
+              });
 
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useImperativeHandle)(ref, function () {
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function refreshCaptcha() {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useImperativeHandle)(ref, function () {
     return {
       refreshCaptcha: refreshCaptcha
     };
   });
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     refreshCaptcha();
   }, []); // const handleFocus = () => {
   //             $('.captchaInput').css('border-color', '#ced4da');
@@ -2919,24 +2945,24 @@ var Captcha = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(fun
     //         {/* css code label in form/main.scss */}
     //     </div>
     // </div>
-    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "groupInput",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "inputForm ",
           id: "divCaptcha",
           "data-lang": "en",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "divLabel",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
               className: "far fa-check-circle true"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
               className: "fas fa-exclamation false"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("label", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
               htmlFor: "name",
               children: "\u06A9\u062F \u0627\u0645\u0646\u06CC\u062A\u06CC"
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
             type: "text",
             onFocus: props.backStyle,
             onInput: props.ChangeStyle,
@@ -2944,26 +2970,26 @@ var Captcha = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.forwardRef)(fun
             id: "captcha",
             placeholder: "\u06A9\u062F \u0627\u0645\u0646\u06CC\u062A\u06CC",
             autoComplete: "off"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
             id: "captchaKey",
             type: "hidden",
             value: captchaKey
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "errorInput errorCaptcha",
           id: "errorCaptcha"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "captchaPic",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
           className: "imgCaptcha",
           src: captcha,
           onClick: refreshCaptcha
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("button", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
           type: "button",
           onClick: refreshCaptcha,
           className: "btn btn-outline-secondary btnCaptcha",
-          children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
+          children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("i", {
             className: "fas fa-sync-alt"
           })]
         })]
@@ -3130,13 +3156,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _useScrollTo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useScrollTo */ "./resources/js/components/web/hooks/useScrollTo.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _useScrollTo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./useScrollTo */ "./resources/js/components/web/hooks/useScrollTo.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_5__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -3149,8 +3183,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) {
-  var changeCaptcha = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+var useMethodsFormUser = function useMethodsFormUser(path, element, setElement, hasCahptcha) {
+  var changeCaptcha = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)();
 
   var handleCheckValue = function handleCheckValue(e) {
     var _e$target = e.target,
@@ -3164,15 +3198,50 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
     });
     axios.post(path, _defineProperty({}, id, value), {
       headers: {
-        'X-CSRF-TOKEN': jquery__WEBPACK_IMPORTED_MODULE_4___default()('meta[name="csrf-token"]').attr('content')
+        'X-CSRF-TOKEN': jquery__WEBPACK_IMPORTED_MODULE_5___default()('meta[name="csrf-token"]').attr('content')
       }
     }).then(function (response) {
       valTrue(idParent);
-    })["catch"](function (error) {
-      // console.log(error.response.data);
-      chptchaErrorCangeStyle();
-      valFalse(idParent, errorDiv, error.response.data.errors[id]);
-    });
+    })["catch"]( /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(error) {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return hasCahptcha;
+
+              case 2:
+                _context.t0 = _context.sent;
+
+                if (!(_context.t0 == true)) {
+                  _context.next = 7;
+                  break;
+                }
+
+                chptchaErrorCangeStyle();
+                _context.next = 8;
+                break;
+
+              case 7:
+                null;
+
+              case 8:
+                // chptchaErrorCangeStyle();
+                valFalse(idParent, errorDiv, error.response.data.errors[id]);
+
+              case 9:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function (_x) {
+        return _ref.apply(this, arguments);
+      };
+    }());
   };
   /**
    * هنگامی که اطلاعات یک فیلد به درستی احراز شد این متد کادر فیلد را سبز رنگ می کند
@@ -3181,8 +3250,8 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
 
 
   var valTrue = function valTrue(idParent) {
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()('#' + idParent).css("border", "1px solid green");
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(idParent, " i.true")).css("display", "flex");
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('#' + idParent).css("border", "1px solid green");
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(idParent, " i.true")).css("display", "flex");
   };
   /**
    * چنانچه کاربر اطلاعات نادرستی وارد کند متد زیر باقرمز کردن کادر فیلد و اعلام خطا هشدار لازم را می دهد
@@ -3193,9 +3262,9 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
 
 
   var valFalse = function valFalse(idParent, errorDiv, errorMessage) {
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()('#' + idParent).css("border", "1px solid red");
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(idParent)).addClass('inputFromSelect');
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(idParent, " i.false")).css("display", "flex");
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('#' + idParent).css("border", "1px solid red");
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(idParent)).addClass('inputFromSelect');
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(idParent, " i.false")).css("display", "flex");
     errorDiv.innerHTML = errorMessage;
   };
   /**
@@ -3234,15 +3303,15 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
 
     if (errorStatus == 422) {
       var firstElementError = Object.keys(errorData)[0];
-      var offset = jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(firstElementError)).offset();
-      sweetalert2__WEBPACK_IMPORTED_MODULE_3___default().fire({
+      var offset = jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(firstElementError)).offset();
+      sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
         position: 'center',
         icon: 'warning',
         text: 'اخطار! لازم است همه فیلدها را وارد کنید.',
         showConfirmButton: false,
         timer: 3000,
         didClose: function didClose() {
-          return jquery__WEBPACK_IMPORTED_MODULE_4___default()(document).scrollTop(offset.top - 80);
+          return jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).scrollTop(offset.top - 80);
         }
       });
 
@@ -3253,10 +3322,10 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
     } else {
       backStyle(e, errorStatus, errorData, element);
 
-      var _offset = jquery__WEBPACK_IMPORTED_MODULE_4___default()(".errorAll").offset();
+      var _offset = jquery__WEBPACK_IMPORTED_MODULE_5___default()(".errorAll").offset();
 
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()(document).scrollTop(_offset.top - 80);
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(idForm)).trigger('reset');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()(document).scrollTop(_offset.top - 80);
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(idForm)).trigger('reset');
 
       var _loop = function _loop(i) {
         setElement(function (perv) {
@@ -3269,7 +3338,7 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
       }
 
       var errorMessage = 'خطایی رخ داده است ، لطفا دوباره تلاش کنید .';
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()('.errorAll').html("<div class='alert alert-danger errorAll' >".concat(errorMessage, "</div> "));
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.errorAll').html("<div class='alert alert-danger errorAll' >".concat(errorMessage, "</div> "));
     }
   };
   /**
@@ -3289,12 +3358,12 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
 
     if (e.type == 'focus') {
       var idParent = e.target.parentNode.id;
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(idParent)).removeClass('inputFromSelect');
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(idParent)).css("border", "1px solid #eaecef");
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(idParent, " i")).css("display", "none");
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(idParent)).removeClass('inputFromSelect');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(idParent)).css("border", "1px solid #eaecef");
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(idParent, " i")).css("display", "none");
       var dviError = e.target.parentNode.parentNode.lastChild;
       dviError.innerHTML = '';
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()(".errorAll").html('');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()(".errorAll").html('');
     } else {
       var valElement;
       errorStatus == 422 && Object.keys(errorData)[0] != 'codeVerify' ? valElement = errorData : valElement = element;
@@ -3305,12 +3374,12 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
         }
 
         var _idParent = document.getElementById(i).parentNode.id;
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(_idParent)).removeClass('inputFromSelect');
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(_idParent)).css("border", "1px solid #eaecef");
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(_idParent, " i")).css("display", "none");
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(_idParent, " label")).css('display', 'none');
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(_idParent, " input")).css('direction', 'rtl');
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(_idParent, " input")).val('');
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(_idParent)).removeClass('inputFromSelect');
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(_idParent)).css("border", "1px solid #eaecef");
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(_idParent, " i")).css("display", "none");
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(_idParent, " label")).css('display', 'none');
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(_idParent, " input")).css('direction', 'rtl');
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(_idParent, " input")).val('');
         var _dviError = document.getElementById(i).parentNode.parentNode.lastChild;
         _dviError.innerHTML = '';
       }
@@ -3332,19 +3401,19 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
     var id = e.target.parentNode.id;
     var lang = document.getElementById(id).getAttribute('data-lang'); // با دستور زیر مقدار این پوت را بدست می آوریم تا در صورت خالی بودن این پوت دایو به حالت اول برگردد، البته این زمانی اتفاق می افتد که کاربر مقداری را وارد کرده و سپس این پوت را خالی می کند   
 
-    var check = jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(id, " input")).val();
+    var check = jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(id, " input")).val();
 
     if (check) {
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(id, " label")).css('display', 'flex');
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(id)).addClass('inputFromSelect');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(id, " label")).css('display', 'flex');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(id)).addClass('inputFromSelect');
 
       if (lang == 'en' || lang == 'num' || lang == 'en_num') {
-        jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(id, " input")).css('direction', 'ltr');
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(id, " input")).css('direction', 'ltr');
       }
     } else {
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(id, " label")).css('display', 'none');
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(id)).removeClass('inputFromSelect');
-      jquery__WEBPACK_IMPORTED_MODULE_4___default()("#".concat(id, " input")).css('direction', 'rtl');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(id, " label")).css('display', 'none');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(id)).removeClass('inputFromSelect');
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()("#".concat(id, " input")).css('direction', 'rtl');
     }
   };
   /**
@@ -3355,13 +3424,33 @@ var useMethodsFormUser = function useMethodsFormUser(path, element, setElement) 
    */
 
 
-  var chptchaErrorCangeStyle = function chptchaErrorCangeStyle() {
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()('#captcha').val('');
-    changeCaptcha.current.refreshCaptcha();
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()("#divCaptcha label").css('display', 'none');
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()("#divCaptcha").removeClass('inputFromSelect');
-    jquery__WEBPACK_IMPORTED_MODULE_4___default()("#divCaptcha input").css('direction', 'rtl');
-  };
+  var chptchaErrorCangeStyle = /*#__PURE__*/function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              jquery__WEBPACK_IMPORTED_MODULE_5___default()('#captcha').val('');
+              _context2.next = 3;
+              return changeCaptcha.current.refreshCaptcha();
+
+            case 3:
+              jquery__WEBPACK_IMPORTED_MODULE_5___default()("#divCaptcha label").css('display', 'none');
+              jquery__WEBPACK_IMPORTED_MODULE_5___default()("#divCaptcha").removeClass('inputFromSelect');
+              jquery__WEBPACK_IMPORTED_MODULE_5___default()("#divCaptcha input").css('direction', 'rtl');
+
+            case 6:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+
+    return function chptchaErrorCangeStyle() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
   /**
    * هنگامی که یک این‌پوت به صورت پیش فرض یک مقداری دارد در ری‌اکت نمی‌شود
    *  به راحتی اچ‌تی‌ام‌ال مقدار آن را تغییر داد، لذا باید با بکار گیری استیت و رویداد آن‌این‌پوت 
@@ -4776,7 +4865,7 @@ function GetMobile(props) {
     }
   }, []);
 
-  var _useMethodsFormUser = (0,_hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__.default)(path, element, setElement),
+  var _useMethodsFormUser = (0,_hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__.default)(path, element, setElement, true),
       changeCaptcha = _useMethodsFormUser.changeCaptcha,
       handleCheckValue = _useMethodsFormUser.handleCheckValue,
       backStyle = _useMethodsFormUser.backStyle,
@@ -4803,7 +4892,7 @@ function GetMobile(props) {
       // استفاده از کلید چک برای این است که چک کنیم کاربر تنها از طریق دستور زیر به صفحه مورد نظر انتقال داده شده است
       navigate('/user/verifyMobileInitial', {
         state: {
-          'check': 'ok',
+          'access': true,
           'mobile': element.mobile,
           'code': response.data.code
         }
@@ -4937,11 +5026,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/index.js");
 /* harmony import */ var _hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/useTitleForm */ "./resources/js/components/web/hooks/useTitleForm.js");
 /* harmony import */ var _hooks_captcha__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/captcha */ "./resources/js/components/web/hooks/captcha.js");
 /* harmony import */ var _hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/useMethodsFormUser */ "./resources/js/components/web/hooks/useMethodsFormUser.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -4968,28 +5059,36 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function Register(props) {
-  var navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_5__.useNavigate)();
+  var navigate = (0,react_router__WEBPACK_IMPORTED_MODULE_6__.useNavigate)();
+
+  var _useLocation = (0,react_router__WEBPACK_IMPORTED_MODULE_6__.useLocation)(),
+      state = _useLocation.state;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
     userName: null,
-    mobile: null,
+    // mobile: null,
     pass: null
   }),
       _useState2 = _slicedToArray(_useState, 2),
       element = _useState2[0],
       setElement = _useState2[1];
 
-  var path = '/api/web/authUser/register';
+  var path = '/web/authUser/register';
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    console.log(path);
-    axios.get(path).then(function (response) {
-      console.log(response);
-    });
-    changeCaptcha.current.refreshCaptcha();
+    // با دستور زیر چک می‌کنیم که کاربر تنها از صفحه گت موبایل وارد شده باشد
+    // With the following command, we check that the user has logged in only from getMobile
+    if ((0,lodash__WEBPACK_IMPORTED_MODULE_4__.isEmpty)(state) || 'access' in state == false || state.access != true) {
+      navigate('/user/getMobile');
+    } // axios.get(path).then(response=>{
+    //     console.log(response);
+    // })
+    // changeCaptcha.current.refreshCaptcha();
+
   }, []);
 
-  var _useMethodsFormUser = (0,_hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__.default)(path, element, setElement),
+  var _useMethodsFormUser = (0,_hooks_useMethodsFormUser__WEBPACK_IMPORTED_MODULE_3__.default)(path, element, setElement, false),
       changeCaptcha = _useMethodsFormUser.changeCaptcha,
       handleCheckValue = _useMethodsFormUser.handleCheckValue,
       valTrue = _useMethodsFormUser.valTrue,
@@ -5002,10 +5101,7 @@ function Register(props) {
   var handleSubmit = function handleSubmit(e) {
     e.preventDefault();
 
-    var data = _objectSpread(_objectSpread({}, element), {}, {
-      captcha: $('#captcha').val(),
-      key: $('#captchaKey').val()
-    });
+    var data = _objectSpread({}, element);
 
     axios.post(path, data, {
       headers: {
@@ -5013,13 +5109,8 @@ function Register(props) {
         'Content-Type': 'application/json; charset=utf-8'
       }
     }).then(function (response) {
-      console.log(response);
-      navigate('/user/showVerifyMobile', {
-        state: {
-          'user_id': response.data.user_id,
-          'code': response.data.code
-        }
-      }); // Swal.fire({
+      console.log(response); // navigate('/user/showVerifyMobile', { state: { 'user_id': response.data.user_id, 'code': response.data.code } });
+      // Swal.fire({
       //     position: 'center',
       //     icon: 'success',
       //     title: 'ثبت نام با موفقیت انجام شد .',
@@ -5034,42 +5125,41 @@ function Register(props) {
       //     // alert("Value:" + jsonObject[prop]);
       //   }
       // console.log(Object.keys(xss)[0]);
-      console.log(error.response);
-      errorSubmit(e, error.response.status, error.response.data.errors, element, 'registerUser');
+      console.log(error.response); // errorSubmit(e, error.response.status, error.response.data.errors, element, 'registerUser');
     });
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "formContainer",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
       className: "formRight",
-      children: [(0,_hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_1__.default)('ثبت نام'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
+      children: [(0,_hooks_useTitleForm__WEBPACK_IMPORTED_MODULE_1__.default)('ثبت نام'), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
         className: "form",
         id: "registerUser",
         method: "post",
         onSubmit: handleSubmit,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
           className: "errorAllContiner errorAll",
           id: "errorAll"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           className: "groupInput",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "inputForm ",
             id: "divUserName",
             "data-lang": "en",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "divLabel",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("i", {
                 className: "far fa-check-circle true"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("i", {
                 className: "fas fa-exclamation false"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("label", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("label", {
                 htmlFor: "userName",
-                children: ["\u0646\u0627\u0645 \u06A9\u0627\u0631\u0628\u0631\u06CC ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
+                children: ["\u0646\u0627\u0645 \u06A9\u0627\u0631\u0628\u0631\u06CC ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("i", {
                   children: "(\u0628\u0647 \u0644\u0627\u062A\u06CC\u0646)"
                 })]
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
               type: "text",
               id: "userName",
               onFocus: backStyle,
@@ -5079,54 +5169,26 @@ function Register(props) {
               autoComplete: "off",
               autoFocus: true
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             className: "errorInput"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
           className: "groupInput",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "inputForm ",
-            id: "divMobile",
-            "data-lang": "num",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-              className: "divLabel",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
-                className: "far fa-check-circle true"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
-                className: "fas fa-exclamation false"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
-                htmlFor: "mobile",
-                children: "\u0645\u0648\u0628\u0627\u06CC\u0644 "
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
-              type: "text",
-              onFocus: backStyle,
-              onInput: ChangeStyle,
-              onBlur: handleCheckValue,
-              id: "mobile",
-              placeholder: "\u0645\u0648\u0628\u0627\u06CC\u0644",
-              autoComplete: "off"
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "errorInput"
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "groupInput",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "inputForm ",
             id: "divPass",
             "data-lang": "en_num",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "divLabel",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("i", {
                 className: "far fa-check-circle true"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("i", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("i", {
                 className: "fas fa-exclamation false"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("label", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
                 htmlFor: "name",
                 children: "\u0631\u0645\u0632 \u0639\u0628\u0648\u0631 "
               })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
               type: "text",
               onFocus: backStyle,
               onInput: ChangeStyle,
@@ -5135,21 +5197,17 @@ function Register(props) {
               placeholder: "\u0631\u0645\u0632 \u0639\u0628\u0648\u0631",
               autoComplete: "off"
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
             className: "errorInput"
           })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_hooks_captcha__WEBPACK_IMPORTED_MODULE_2__.default, {
-          ref: changeCaptcha,
-          backStyle: backStyle,
-          ChangeStyle: ChangeStyle
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
           type: "submit",
           className: "btnForm",
           id: "",
           value: "\u062B\u0628\u062A"
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: "formLeft",
       children: "image"
     })]
@@ -5539,7 +5597,7 @@ function VerifyMobileInitial(props) {
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     // با دستور زیر چک می‌کنیم که کاربر تنها از صفحه گت موبایل وارد شده باشد
     // With the following command, we check that the user has logged in only from getMobile
-    if ((0,lodash__WEBPACK_IMPORTED_MODULE_8__.isEmpty)(state) || 'check' in state == false || state.check != 'ok') {
+    if ((0,lodash__WEBPACK_IMPORTED_MODULE_8__.isEmpty)(state) || 'access' in state == false || state.access != true) {
       navigate('/user/getMobile');
     }
 
@@ -5562,8 +5620,7 @@ function VerifyMobileInitial(props) {
       setError = _useInputNumberCode.setError;
 
   var handleSubmit = function handleSubmit(e) {
-    e.preventDefault(); // let data = { ...element}
-
+    e.preventDefault();
     axios.post(path, {
       'code': codeInput
     }, {
@@ -5572,20 +5629,11 @@ function VerifyMobileInitial(props) {
         'Content-Type': 'application/json; charset=utf-8'
       }
     }).then(function (response) {
-      // console.log('ok zabi');
-      // navigate('/user/verifyMobile',{state:{'user_id':response.data.user_id,'code':response.data.code}});
       navigate('/user/register', {
         state: {
-          'check': 'ok'
+          'access': true
         }
       });
-      console.log(response); // Swal.fire({
-      //     position: 'center',
-      //     icon: 'success',
-      //     title: 'ثبت نام با موفقیت انجام شد .',
-      //     showConfirmButton: false,
-      //     timer: 3000
-      // })
     })["catch"]( /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(error) {
         var firstElementError;
@@ -5671,26 +5719,22 @@ function VerifyMobileInitial(props) {
         'Content-Type': 'application/json; charset=utf-8'
       }
     }).then(function (response) {
-      console.log(response); // دستور زیر فقط برای چک کردن برنامه هست
+      // دستور زیر فقط برای چک کردن برنامه هست
       //این کد باید حتما پاک شود
-
       navigate('/user/verifyMobileInitial', {
         state: {
           'mobile': response.data.mobile,
           'code': response.data.code
         }
       }); // navigate('/user/verifyMobile',{state:{'user_id':response.data.user_id,'code':response.data.code}});
-
-      sweetalert2__WEBPACK_IMPORTED_MODULE_4___default().fire({
-        position: 'center',
-        icon: 'success',
-        title: 'کد با موفقیت ارسال شد .',
-        showConfirmButton: false,
-        timer: 3000,
-        didClose: function didClose() {
-          setMinutes(1);
-        }
-      });
+      // Swal.fire({
+      //     position: 'center',
+      //     icon: 'success',
+      //     title: 'کد با موفقیت ارسال شد .',
+      //     showConfirmButton: false,
+      //     timer: 3000,
+      //     didClose: () => { setMinutes(1) }
+      // })
     })["catch"](function (error) {
       console.log(error.response.data);
     });

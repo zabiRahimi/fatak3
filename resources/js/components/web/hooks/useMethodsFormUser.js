@@ -4,7 +4,7 @@ import useScrollTo from './useScrollTo';
 import Swal from 'sweetalert2';
 import $ from "jquery";
 
-const  useMethodsFormUser = (path, element, setElement) => {
+const  useMethodsFormUser = (path, element, setElement,hasCahptcha) => {
     const changeCaptcha = useRef();
     const handleCheckValue = e => {
         let { id, value } = e.target;
@@ -16,9 +16,10 @@ const  useMethodsFormUser = (path, element, setElement) => {
             .then(function (response) {
                 valTrue(idParent);
             })
-            .catch((error) => {
+            .catch(async(error) => {
                 // console.log(error.response.data);
-                chptchaErrorCangeStyle();
+                await hasCahptcha==true? chptchaErrorCangeStyle():null;
+                // chptchaErrorCangeStyle();
                 valFalse(idParent, errorDiv, error.response.data.errors[id]);
             })
 
@@ -184,9 +185,9 @@ const  useMethodsFormUser = (path, element, setElement) => {
      * کد کپتچا را تغییر می دهد
      * استایل باکس کپتچا را به حالت اول بر می گرداند
      */
-    const chptchaErrorCangeStyle = () => {
+    const chptchaErrorCangeStyle = async() => {
         $('#captcha').val('');
-        changeCaptcha.current.refreshCaptcha();
+       await changeCaptcha.current.refreshCaptcha();
         $(`#divCaptcha label`).css('display', 'none');
         $(`#divCaptcha`).removeClass('inputFromSelect');
         $(`#divCaptcha input`).css('direction', 'rtl');

@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 
 use App\Models\User;
+use App\Models\MobileUser;
 use App\Models\VerifyCodeMobile;
 
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -65,16 +66,13 @@ class RegisterController extends Controller
 /** */
     public function getMobile(Request $request)
     {
-
         $this->mobileValidator($request->all())->validate();
-    if($request->mobile && $request->captcha){
-        $code=$this->generateCodeMobile();
-        $this->createCookie($request->mobile,$code);
-        // Cookie::queue('name', 'value', 30,null,null,false,true);
-        // $cookie =request()->cookie('name');
-        return  response()->json(['code'=>$code, 'mobile'=>$request->mobile],200);
-    }
-        
+       
+        if($request->mobile && $request->captcha){
+            $code=$this->generateCodeMobile();
+            $this->createCookie($request->mobile,$code);
+            return  response()->json(['code'=>$code, 'mobile'=>$request->mobile],200);
+        }
     }
     /**
      * ساختن و ارسال دوباره کد تایید موبایل
@@ -137,10 +135,19 @@ class RegisterController extends Controller
         
 
         if(request()->hasCookie('shenakht')){
+
             $val=json_decode(request()->cookie('shenakht'));
+
             if($val[1]==$request->code){
-            return response()->json(['code'=>'کد معتبر است.'],200);
+
+                 $this->createCookieSaveMobile($val[0]);
+
+                 cookie()->queue(cookie()->forget('shenakht'));
+
+                 return response()->json(['code'=>'کد معتبر است.'],200);
+
             }
+
             return response()->json(['message'=>'The given data was invalid.','errors'=>['code'=>'کد را صحیح وارد کنید.']],422);
          
         }
@@ -148,6 +155,20 @@ class RegisterController extends Controller
          return response()->json(['message'=>'The given data was invalid.','errors'=>['codeExpire'=>'کد ارسالی منقضی شده است، برای ارسال کد جدید اقدام کنید.']],422);
         
     }
+    /**
+     * هنگامی که موبایل تایید شد ای متد فراخوانی می‌شود
+     * از این متد برای انتقال امن شماره موبایل در کوکی برای ثبت نهایی استفاده می‌شود
+     */
+    protected function createCookieSaveMobile(int $mobile)
+    {
+        
+        if(request()->hasCookie('shenakhtM')){
+            cookie()->queue(cookie()->forget('shenakhtM'));
+        }
+       
+        cookie()->queue(cookie('shenakhtM', $mobile, 15,null,null,false,true));  
+    }
+    
     public function sessionRegister(Request $request)
     {
         if($request->session()->has('register')) {
@@ -171,12 +192,15 @@ class RegisterController extends Controller
 
         $this->validator($request->all())->validate();
         // این شرط برای این است که اطمسنان حاصل کنیم که کاربر دکمه ثبت فرم را انتخاب کردن و همه فیلدها احراز شده باشن و نه فقط یک فیلد احراز شده باشد، البته می توان بغیر از این دو فیلد دو یا چند فیلد دیگر را داخل شرط گذاشت
-        if ($request->userName && $request->captcha) {
+        if ($request->userName && $request->pass) {
 
+            
             try {
                 DB::beginTransaction();
+                $request['mobile']=request()->cookie('shenakhtM');
+
                 $user = $this->create($request->all());
-                $createVerifyCodeMobile=$this->createVerifyCodeMobile($user);
+                // $createVerifyCodeMobile=$this->createVerifyCodeMobile($user);
                 DB::commit();
                 
             } catch (Exception $e) {
@@ -185,8 +209,8 @@ class RegisterController extends Controller
             }
             
 
-            if ( !empty($user) ) {
-                Auth::login($user);
+            // if ( !empty($user) ) {
+            //     Auth::login($user);
 
                 // Auth::guard('api')->login($user);
                 // Auth::guard('api')->attempt($user);
@@ -203,10 +227,10 @@ class RegisterController extends Controller
                 // //                 ?: response()->json(['user'=> $user]);
                 // }
                 
-                 return  response()->json(['user_id'=> $user->id , 'code'=> $createVerifyCodeMobile->code]);
-            } else {
-                return response()->json([], 500);
-            }
+            //      return  response()->json(['user_id'=> $user->id , 'code'=> $createVerifyCodeMobile->code]);
+            // } else {
+            //     return response()->json([], 500);
+            // }
             // // // $this->guard('shop')->login($user);
 
             // // // return $this->registered($request, $user)
@@ -238,14 +262,20 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        (!empty($data['id'])) ? $id = ',' . $data['id'] : $id = ',';
-        (!empty($data['key'])) ? $key = $data['key'] : $key = null;
+       
         return Validator::make($data, [
             'userName' => ['sometimes', 'required',new UserName(),'unique:users,user_name'],
-            'mobile' => ['sometimes', 'required', new Mobile, 'unique:users,mobile' . $id],
+            // 'mobile' => ['sometimes', 'required', new Mobile, 'unique:users,mobile' . $id],
             'pass' => ['sometimes', 'required', new Pass],
-            'captcha' => ['sometimes', 'required', 'captcha_api:' . $key],
         ]);
+        // (!empty($data['id'])) ? $id = ',' . $data['id'] : $id = ',';
+        // (!empty($data['key'])) ? $key = $data['key'] : $key = null;
+        // return Validator::make($data, [
+        //     'userName' => ['sometimes', 'required',new UserName(),'unique:users,user_name'],
+        //     'mobile' => ['sometimes', 'required', new Mobile, 'unique:users,mobile' . $id],
+        //     'pass' => ['sometimes', 'required', new Pass],
+        //     'captcha' => ['sometimes', 'required', 'captcha_api:' . $key],
+        // ]);
     }
 
     /**
@@ -273,13 +303,13 @@ class RegisterController extends Controller
            return $this->checkCodeMobile($request->all());
         }
     }
-    protected function createVerifyCodeMobile($user)
-    {
-        return VerifyCodeMobile::create([
-            'user_id' => $user->id,
-            'mobile' => $user->mobile,
-        ]);
-    }
+    // protected function createVerifyCodeMobile($user)
+    // {
+    //     return VerifyCodeMobile::create([
+    //         'user_id' => $user->id,
+    //         'mobile' => $user->mobile,
+    //     ]);
+    // }
     protected function updateVerifyCokeMobile(Request $request){
         $model = new VerifyCodeMobile();
         $newCode=$model->generateCode();

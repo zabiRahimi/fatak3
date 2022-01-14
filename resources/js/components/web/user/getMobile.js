@@ -10,7 +10,7 @@ import { isEmpty } from "lodash";
 
 
 
-export default function GetMobile(props) {
+export default function GetMobile (props) {
     const navigate = useNavigate();
     const { state } = useLocation();
     const path = '/web/authUser/getMobile';
@@ -28,7 +28,7 @@ export default function GetMobile(props) {
             }
     }, []);
 
-    const { changeCaptcha, handleCheckValue, backStyle, ChangeStyle, setValue, errorSubmit } = useMethodsFormUser(path, element, setElement);
+    const { changeCaptcha, handleCheckValue, backStyle, ChangeStyle, setValue, errorSubmit } = useMethodsFormUser(path, element, setElement,true);
     const handleSubmit = (e) => {
         e.preventDefault();
         let data = { ...element, captcha: $('#captcha').val(), key: $('#captchaKey').val() }
@@ -37,7 +37,7 @@ export default function GetMobile(props) {
                 // نکته ارسال کد بصورت موقت و فقط برای چک کردن کار کردن برنامه هست
                 //حتما باید این کد اصلاخ شود چون بسیار خطرناک
                 // استفاده از کلید چک برای این است که چک کنیم کاربر تنها از طریق دستور زیر به صفحه مورد نظر انتقال داده شده است
-                navigate('/user/verifyMobileInitial',{state:{'check':'ok','mobile':element.mobile , 'code':response.data.code}});
+                navigate('/user/verifyMobileInitial',{state:{'access':true,'mobile':element.mobile , 'code':response.data.code}});
             })
             .catch(error => {
                 const firstElementError = Object.keys(error.response.data.errors)[0];
